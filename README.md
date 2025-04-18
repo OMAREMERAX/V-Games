@@ -156,7 +156,7 @@
         <span><img src="https://img.icons8.com/ios-filled/24/user.png"/>8K</span>
         <span><img src="https://img.icons8.com/color/24/shield.png"/>Security Status</span>
       </div>
-      <a href="#" class="install-btn">install</a>
+      <a href="https://areyourealhuman.com/cl/i/kl1wg8" class="install-btn">install</a>
     </div>
 
     <div class="app-card">
