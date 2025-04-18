@@ -122,7 +122,7 @@
         <span><img src="https://img.icons8.com/ios-filled/24/user.png"/>10K</span>
         <span><img src="https://img.icons8.com/color/24/shield.png"/>Security Status</span>
       </div>
-      <a href="#" class="install-btn">install</a>
+      <a href="https://locked4.com/cl/i/5k1pr3" class="install-btn">install</a>
     </div>
 
     <div class="app-card">
