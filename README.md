@@ -144,7 +144,7 @@
         <span><img src="https://img.icons8.com/ios-filled/24/user.png"/>12K</span>
         <span><img src="https://img.icons8.com/color/24/shield.png"/>Security Status</span>
       </div>
-      <a href="#" class="install-btn">install</a>
+      <a href="https://mobileverify.net/cl/i/1oewr1" class="install-btn">install</a>
     </div>
 
     <!-- Games added by request -->
