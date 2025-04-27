@@ -169,14 +169,14 @@
     </div>
 
     <div class="app-card">
-      <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4f/52/1f/4f521f83-c99d-ccb3-6881-2277a1c05d91/AppIcon-Global-1x_U007emarketing-0-7-0-85-220-0.png/230x0w.webp" alt="AFK Journey"/>
-      <h3>AFK Journey</h3>
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/79/d8/ba/79d8ba0c-9c94-88c3-0a16-7065a1ea0394/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/230x0w.webp" alt=" baseball 9"/>
+      <h3> baseball 9</h3>
       <div class="info-row">
         <span><img src="https://img.icons8.com/fluency/24/star.png"/>4.3</span>
         <span><img src="https://img.icons8.com/ios-filled/24/user.png"/>7K</span>
         <span><img src="https://img.icons8.com/color/24/shield.png"/>Security Status</span>
       </div>
-      <a href="#" class="install-btn">install</a>
+      <a href="https://locked1.com/cl/i/podeml" class="install-btn">install</a>
     </div>
 
     <div class="app-card">
