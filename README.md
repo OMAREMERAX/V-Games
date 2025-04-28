@@ -15,6 +15,10 @@
   gtag('config', 'G-1BDRVGQK80');
 </script>
 <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+git add .
+git commit -m "Added favicon"
+git push origin main
+
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap" rel="stylesheet">
   
 
