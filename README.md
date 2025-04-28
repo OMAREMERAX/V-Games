@@ -7,7 +7,6 @@
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BDRVGQK80"></script>
 <script>
-<link rel="icon" href="favicon-32x32.png" type="image/x-icon">
 
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -15,7 +14,10 @@
 
   gtag('config', 'G-1BDRVGQK80');
 </script>
+<link rel="icon" href="favicon-32x32.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap" rel="stylesheet">
+  <a href="https://example.com" target="_blank" rel="noopener noreferrer">افتح الموقع في المتصفح</a>
+
   <style>
     body {
       background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
