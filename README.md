@@ -7,6 +7,8 @@
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BDRVGQK80"></script>
 <script>
+  <link rel="icon" href="favicon-32x32.png" type="image/png">
+
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
