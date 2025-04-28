@@ -137,8 +137,8 @@
     </div>
 
     <div class="app-card">
-      <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5e/fb/6c/5efb6c79-06af-2ed5-94b7-48d55e92bb54/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/230x0w.webp" alt="Call of Dragons"/>
-      <h3>Call of Dragons</h3>
+      <img src="https://avatars.githubusercontent.com/u/209201458?s=200&v=4" alt=" GTA 5 Mobile"/>
+      <h3> GTA 5 Mobile</h3>
       <div class="info-row">
         <span><img src="https://img.icons8.com/fluency/24/star.png"/>4.7</span>
         <span><img src="https://img.icons8.com/ios-filled/24/user.png"/>11K</span>
