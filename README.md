@@ -191,7 +191,7 @@
     </div>
 
     <div class="app-card">
-      <img src="[https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/41/b9/67/41b967f0-828d-a469-333d-f8b4895ccd25/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/230x0w.webp](https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5e/fb/6c/5efb6c79-06af-2ed5-94b7-48d55e92bb54/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/230x0w.webp)" alt="Call of Dragons"/>
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/50/26/e2/5026e2fe-1e2b-6c23-fb7a-f96f5a2c27d9/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/230x0w.webp" alt="Call of Dragons"/>
       <h3>Call of Dragons</h3>
       <div class="info-row">
         <span><img src="https://img.icons8.com/fluency/24/star.png"/>4.2</span>
