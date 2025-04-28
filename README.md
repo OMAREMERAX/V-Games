@@ -16,7 +16,7 @@
 </script>
 <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap" rel="stylesheet">
-  <a href="https://example.com" target="_blank" rel="noopener noreferrer">افتح الموقع في المتصفح</a>
+  
 
   <style>
     body {
