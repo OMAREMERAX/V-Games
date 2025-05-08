@@ -36,7 +36,7 @@
     }
 
    .search-container {
-    position: relative;
+    position: center;
     width: 300px;
   }
 
