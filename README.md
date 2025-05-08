@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>V-Games</title>
+  <title>🎮 V-Games</title>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BDRVGQK80"></script>
 <script>
@@ -122,7 +122,8 @@
   </style>
 </head>
 <body>
-  <h1>🎮 V-Games</h1>
+         <script async="async" data-cfasync="false" src="//pl26595859.profitableratecpm.com/77c57b5ce61d3926bfccddecadf7f4ae/invoke.js"></script>
+<div id="container-77c57b5ce61d3926bfccddecadf7f4ae"></div>
 
   <div class="search-container">
     <input type="text" placeholder="🔍 search ">
