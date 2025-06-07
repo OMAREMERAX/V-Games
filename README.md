@@ -166,8 +166,8 @@
     </div>
 
     <div class="app-card">
-      <img src="https://avatars.githubusercontent.com/u/209201458?s=200&v=4" alt=" GTA 5 Mobile"/>
-      <h3> GTA 5 Mobile</h3>
+      <img src="https://play-lh.googleusercontent.com/J_4kcCrgNmQdEcMgWG5_ZX5o5Z3GFnkcapT17K3tDf4WOWJ1C29J0yTqFKcGc2m0gXo=w240-h480-rw" alt=" Top War: Battle Game"/>
+      <h3>Top War: Battle Game</h3>
       <div class="info-row">
         <span><img src="https://img.icons8.com/fluency/24/star.png"/>4.7</span>
         <span><img src="https://img.icons8.com/ios-filled/24/user.png"/>11K</span>
