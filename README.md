@@ -526,7 +526,8 @@
       </div>
     </div>
     
-    <a href="YOUR_CPA_LINK_HERE" class="quantum-cta" target="_blank">🎮 Play Now – It's Free</a>
+    <a href="https://installchecker.com/cl/i/dv6dmw
+" class="quantum-cta" target="_blank">🎮 Play Now – It's Free</a>
     
     <div class="neural-reviews">
       <div class="review-neural">
