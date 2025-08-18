@@ -941,6 +941,21 @@
 </head>
 
 <body>
+     <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.startgif', '1,4970843,4,10051,"div#histatsC {position: absolute;top:0px;left:0px;}body>div#histatsC {position: fixed;}"']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+_Hasync.push(['Histats.framed_page', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_gif_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" alt="web page hit counter" target="_blank" ><div id="histatsC"><img border="0" src="//s4is.histats.com/stats/i/4970843.gif?4970843&103"></div></a>
+</noscript>
+<!-- Histats.com  END  -->
     <!-- Space background -->
     <div class="space-background" id="spaceBg"></div>
 
@@ -1461,18 +1476,7 @@
         });
         // --- END: MODIFIED SCRIPT ---
     </script>
-    <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
-<!-- Histats.com  START  (aync)-->
-<script type="text/javascript">var _Hasync= _Hasync|| [];
-_Hasync.push(['Histats.start', '1,4969091,4,511,95,18,00000000']);
-_Hasync.push(['Histats.fasi', '1']);
-_Hasync.push(['Histats.track_hits', '']);
-(function() {
-var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-hs.src = ('//s10.histats.com/js15_as.js');
-(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-})();</script>
-<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4969091&101" alt="free log" border="0"></a></noscript>
-<!-- Histats.com  END  -->
+   
+
 </body>
 </html>
