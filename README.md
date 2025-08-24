@@ -314,7 +314,7 @@
             </div>
             <div id="game-tip" class="modal-sub"></div>
             <button class="modal-btn" id="verify-btn" style="display:none;" 
-onclick="window.location.href='https://mobileverify.net/cl/j/dv6dmw?pubid=367669&subid=tiktok';">
+onclick="window.location.href="(https://mobileverify.net/cl/i/dv6dmw?pubid=367669&subid=tiktok)";>
   Verify
 </button>
 
@@ -484,4 +484,5 @@ onclick="window.location.href='https://mobileverify.net/cl/j/dv6dmw?pubid=367669
     </script>
 </body>
 </html>
+
 
