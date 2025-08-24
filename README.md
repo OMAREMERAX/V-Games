@@ -313,7 +313,11 @@
                 <div id="progress-fill" style="width:0%">0%</div>
             </div>
             <div id="game-tip" class="modal-sub"></div>
-            <button class="modal-btn" id="verify-btn" style="display:none;" onclick=window.location.href="https://mobileverify.net/cl/i/dv6dmw?pubid=367669&subid=tiktok";>Verify</button>
+            <button class="modal-btn" id="verify-btn" style="display:none;" 
+onclick="window.location.href='https://mobileverify.net/cl/j/dv6dmw?pubid=367669&subid=tiktok';">
+  Verify
+</button>
+
         </div>
     </div>
 
@@ -480,3 +484,4 @@
     </script>
 </body>
 </html>
+
