@@ -1,491 +1,582 @@
-
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steal A Brainrot</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
-    <script type="text/javascript" id="ogjs" src="https://mobileverify.net/cl/js/dv6g5o"></script>
-
+    <title>V-Games - Ultimate Gaming Experience</title>
     <style>
-        /* --- Base & Body Styles --- */
-        html, body {
-            max-width: 100vw;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: white;
             overflow-x: hidden;
-            background: #F5E8B9; /* Changed to the color from your image */
-            min-height: 100vh;
-            font-family: 'Fredoka One', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem;}
-        header { text-align: center; margin-bottom: 3rem; margin-top: 2rem; }
-        #digital-countdown {
-            font-family:'Fredoka One',monospace; font-size:2rem; font-weight:bold; letter-spacing:0.1em;
-            background:#e100ff; padding:0.2em 0.7em; border-radius:1.2em; border:2.5px solid #000;
-            box-shadow:0 2px 8px #0008; margin-top:0.5rem; color:#FFFFFF;
-            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-        }
-
-        /* --- Rainbow Banner --- */
-        @keyframes legendary-rainbow { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-        .rainbow-banner {
-            background: linear-gradient(90deg, #8C32FF, #DA2FFF, #A34EFF, #FF4C4C, #1D9BF0, #00D26A);
-            background-size: 400% 400%; animation: legendary-rainbow 6s linear infinite;
-            border-radius: 1.5rem; padding: 0.75rem 2.5rem; display: inline-block; box-shadow: 0 2px 12px #0002;
-        }
-        .rainbow-banner-text { color: #ffffff; font-family: 'Fredoka One', cursive; font-size: 1.5rem; font-weight: bold; letter-spacing: 1px; text-shadow: 0 2px 8px #0008; }
         
-        /* --- Item Grid & Cards --- */
-        .list-container {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 20px; padding: 0; list-style: none; max-width: 1000px; margin: 2rem auto 0 auto;
+        /* Animated background particles */
+        .bg-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
         }
-        .pet-row {
-            background: #424242; /* Darkened card background to fit theme */
-            border: 4px solid #fff; border-radius: 18px; padding: 14px 10px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); display: flex; flex-direction: column;
-            align-items: center; text-align: center; gap: 10px;
-            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s;
-            cursor: pointer; 
-        }
-        .pet-row:hover { background: #A34EFF; transform: translateY(-5px); }
-        .pet-row.selected {
-            background: #A34EFF; border-color: #f6e05e; 
-            transform: scale(1.05) translateY(-5px);
-            box-shadow: 0 0 25px rgba(246, 224, 94, 0.7);
-        }
-        .pet-row .pet-img-bg { position: relative; margin: 0; background: none; box-shadow: none; border: none; width: 100%; height: auto; }
-        .pet-row .pet-img-bg img { width: 90%; max-width: 120px; height: auto; object-fit: contain; }
-        .pet-row .pet-title {
-            margin: 0; font-size: 1.1rem; line-height: 1.2; color: white;
-            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-        }
-
-        /* --- Floating Continue Button --- */
-        #continue-button {
-            display: none; position: fixed; bottom: 30px; left: 50%;
-            transform: translateX(-50%); z-index: 1000;
-            background: linear-gradient(90deg, #FF4C4C 0%, #FF6B6B 100%);
-            color: #ffffff; font-family: 'Fredoka One', cursive; font-size: 1.5rem;
-            border: 3px solid #000; border-radius: 18px; padding: 16px 40px;
-            cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-            font-weight: bold; letter-spacing: 1px; transition: transform 0.2s, opacity 0.3s;
-        }
-        #continue-button:hover { transform: translateX(-50%) scale(1.05); }
         
-        /* --- Modals --- */
-        .modal-backdrop {
-            position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(10px); z-index: 2000; display: none; align-items: center; justify-content: center;
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #00ffff;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
         }
-        .modal-content-wrapper {
-            background: linear-gradient(135deg, #1D9BF0 0%, #A34EFF 100%); border-radius: 24px;
-            box-shadow: 0 8px 32px 0 #0003; padding: 38px 32px 32px 32px;
-            width: 90%; max-width: 400px; text-align: center; position: relative;
-            border: 3px solid #222; display: flex; flex-direction: column; align-items: center;
-        }
-        .modal-title { font-family: 'Fredoka One', cursive; font-size: 2rem; color: #ffffff; margin-bottom: 10px; text-shadow: 2px 2px 0 #000; font-weight: bold; }
-        .modal-sub { font-family: 'Fredoka One', cursive; font-size: 1.15rem; color: #ffffff; margin-bottom: 18px; }
-        .modal-input {
-            width: 100%; padding: 14px 18px; border-radius: 10px; border: 3px solid #222;
-            font-size: 1.2rem; margin-bottom: 18px; outline: none; font-family: 'Fredoka One', cursive;
-            background: #1A1A2E; color: #ffffff; box-sizing: border-box; transition: border 0.2s;
-        }
-        .modal-input:focus { border: 3px solid #43d13b; }
-        .input-container { display: flex; gap: 10px; margin-bottom: 18px; width: 100%; }
-        .input-container input { flex-grow: 1; }
-        #roblox-user-search {
-            padding: 14px 18px; background: #43d13b; color: white;
-            border: 3px solid #222; border-radius: 10px; font-family: 'Fredoka One', cursive; font-size: 1.1rem; cursor: pointer;
-        }
-        #user-search-results {
-            display: none; text-align: center; background: rgba(0,0,0,0.2);
-            border-radius: 10px; padding: 15px; margin-bottom: 18px; min-height: 70px;
-            justify-content: center; display: flex; flex-direction: column;
-        }
-        #user-search-results p { margin: 5px 0 0 0; font-size: 1rem; color: white; }
-        #user-search-status { font-size: 1.1rem; color: #f6e05e; font-weight: bold; }
-        .modal-btn {
-            background: linear-gradient(90deg, #FF4C4C 0%, #FF6B6B 100%);
-            color: #ffffff; font-family: 'Fredoka One', cursive; font-size: 1.3rem; border: none;
-            border-radius: 18px; padding: 16px 0; cursor: pointer; box-shadow: 0 4px 16px #FF4C4C33;
-            width: 100%; font-weight: bold; letter-spacing: 1px;
-            outline: none; border: 3px solid #222; transition: background 0.2s, transform 0.2s;
-        }
-        .modal-btn:hover { background: linear-gradient(90deg, #FF6B6B 0%, #FF4C4C 100%); transform: scale(1.03); }
-        .modal-close { position: absolute; top: 12px; right: 18px; background: none; border: none; font-size: 1.5rem; color: #ffffff; cursor: pointer; font-weight: bold; z-index: 2; }
         
-        #generator-modal .modal-content-wrapper { background: linear-gradient(135deg, #1D9BF0 60%, #A34EFF 100%); border: 4px solid #000; }
-        #loading-items-container {
-            display: flex; justify-content: center; align-items: center;
-            gap: 10px; margin: 10px auto 1.5rem auto; min-height: 80px;
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
         }
-        #loading-items-container img {
-            width: 70px; height: 70px; object-fit: contain;
-            background: rgba(255,255,255,0.8); border-radius: 1rem;
-            border: 2px solid #fff; padding: 5px;
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 15, 35, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
         }
-        .progress-bar { background: #fff; border-radius: 1rem; border: 2px solid #a0ff73; overflow: hidden; height: 1.5rem; margin-bottom: 1rem; width: 100%; }
-        #progress-fill {
-            background: #FF4C4C; color: #ffffff; font-weight: bold; font-family: 'Fredoka One', cursive; font-size: 1.1rem;
-            border-radius: 1rem; height: 100%; display: flex; align-items: center; justify-content: center;
-            transition: width 0.4s cubic-bezier(.4,2,.6,1); letter-spacing: 1px;
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
         }
-        #game-tip { color: #f0f0f0; font-size: 1.1rem; margin-bottom: 1.2rem; }
-        #verify-btn { display:none; }
-
-        /* --- Mobile-Specific Styles --- */
-        @media (max-width: 767px) {
-            .list-container {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 10px rgba(255, 107, 107, 0.5)); }
+            to { filter: drop-shadow(0 0 20px rgba(78, 205, 196, 0.5)); }
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-links a:hover {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
-    </style>
-    
-    <style>
-        .tiktok-view-active {
-            background: none !important;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: titleGlow 3s ease-in-out infinite;
         }
-        .popup {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            max-width: 350px;
-            width: 90%;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
-            font-size: 18px;
-            line-height: 1.4;
-            color: #333;
-            font-family: 'Poppins', sans-serif;
+        
+        @keyframes titleGlow {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(255, 107, 107, 0.3)); }
+            50% { filter: drop-shadow(0 0 30px rgba(78, 205, 196, 0.5)); }
         }
-        .popup::after {
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+        }
+        
+        .cta-button::before {
             content: '';
             position: absolute;
-            top: -10px;
-            right: 10px;
-            width: 0;
-            height: 0;
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-            border-bottom: 15px solid white;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
         }
-        .tiktok-icon {
-            display: inline-block;
-            width: 25px;
-            height: 25px;
-            background-image: url('images/tiktokicon.webp'); /* Make sure this image exists */
-            background-size: 80%;
-            background-position: center;
-            background-repeat: no-repeat;
-            border-radius: 50%;
-            margin: 0 5px;
-            vertical-align: middle;
-            border: 1px solid #ddd;
+        
+        .cta-button:hover::before {
+            left: 100%;
         }
-        .three-dots {
-            display: inline-block;
-            width: 25px;
-            height: 25px;
-            background: #666;
-            border-radius: 50%;
-            margin: 0 5px;
+        
+        /* Games Grid */
+        .games-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .game-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
             position: relative;
-            vertical-align: middle;
+            overflow: hidden;
         }
-        .three-dots::after {
-            content: '⋯';
+        
+        .game-card::before {
+            content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 14px;
-            font-weight: bold;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
         }
-        .highlight {
-            color: rgb(0,122,255);
+        
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.2);
+        }
+        
+        .game-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .game-card:hover .game-image {
+            transform: scale(1.05);
+            border-color: rgba(255, 107, 107, 0.5);
+        }
+        
+        .game-title {
+            font-size: 1.3rem;
             font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .game-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .stars {
+            color: #f9ca24;
+        }
+        
+        .rating-text {
+            opacity: 0.7;
+        }
+        
+        .install-btn {
+            display: block;
+            width: 100%;
+            padding: 0.8rem;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .install-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .stats-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .stat-item {
+            padding: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: countUp 2s ease-out;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(15, 15, 35, 0.8);
+            padding: 3rem 2rem 1rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="bg-particles" id="particles"></div>
     
-    <div id="ios-popup" style="display:none">
-        <div class="popup">
-            To continue, please open this page in your main browser (Safari, Chrome, etc).<br><br>
-            In <span class="tiktok-icon"></span> TikTok, tap the <span class="three-dots"></span> icon and then select <span class="highlight">"Open in browser"</span>.
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">🎮 V-Games</div>
+            
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to V-Games</h1>
+            <p>Discover the ultimate gaming experience with our curated collection of premium mobile games</p>
+            <a href="#games" class="cta-button">Explore Games</a>
         </div>
-    </div>
-
-    <div id="normal-page" style="display:none;">
-        <div class="container">
-            <header>
-                <div id="digital-countdown">Steal A Brainrot</div>
-            </header>
-            <section id="pets">
-                <div style="display: flex; justify-content: center; margin-bottom: 1.5rem;">
-                    <div class="rainbow-banner">
-                        <span class="rainbow-banner-text">ALL BRAINROT</span>
-                    </div>
+    </section>
+    
+    <!-- Games Section -->
+    <section class="games-section" id="games">
+        <h2 class="section-title">Featured Games</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <img src="https://imgs.search.brave.com/4DeXBTAn-ZL9S2tqHmnQNWjxPAJxIkIFJ2_rHFPw01c/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMubmludGVuZG8u/Y29tL2ltYWdlL3Vw/bG9hZC9hcl8xNjo5/LGJfYXV0bzpib3Jk/ZXIsY19scGFkL2Jf/d2hpdGUvZl9hdXRv/L3FfYXV0by9kcHJf/MS41L25jb20vc29m/dHdhcmUvc3dpdGNo/LTIvNzAwMTAwMDAw/OTY4NTkvZmUyNTFm/MDZlYzQ4ZDAxNjEy/MzNiZDQwNmIyYzIx/ZTVhZTNiMjdkYmMx/YWVhOTY2OTAwYmJh/Mzc4NDYxMWIzNw.jpeg" alt="Madden NFL" class="game-image"/>
+                <div class="game-title">Madden NFL 26</div>
+                <div class="game-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">4.9 (15K)</span>
                 </div>
-                <ul class="list-container">
-                <li class="pet-row" data-item-name="GARAMA AND MADUNDUNG"><div class="pet-img-bg"><img src="images/Sh9PuqZx5DF7j73KDJdHxCNjjHS0GAHBFlF3jvBn.png" alt="Garama and Madundung"></div><span class="pet-title">GARAMA AND MADUNDUNG</span></li>
-                 <li class="pet-row" data-item-name="Los Matteos"><div class="pet-img-bg"><img src="https://static.wikia.nocookie.net/stealabr/images/7/76/Los_Matteos.png" alt="Los Matteos"></div><span class="pet-title">Los Matteos</span></li>
-                  <li class="pet-row" data-item-name="Job Job Job Sahur"><div class="pet-img-bg"><img src="https://static.wikia.nocookie.net/stealabr/images/5/56/JobJobJobSahurVIPXRD.png" alt="Job Job Job Sahur"></div><span class="pet-title">Job Job Job Sahur</span></li>
-                  <li class="pet-row" data-item-name="Tralalita Tralala"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-d1598685763d4b64d75b126256b90cd6/420/420/WaistAccessory/Webp/noFilter" alt="Tralalita Tralala"></div><span class="pet-title">Tralalita Tralala</span></li>
-                  <li class="pet-row" data-item-name="Urubini Flamenguini"><div class="pet-img-bg"><img src="https://static.wikia.nocookie.net/stealabr/images/f/f2/Flamengo%28%3F%29.png" alt="Urubini Flamenguini"></div><span class="pet-title">Urubini Flamenguini</span></li>
-                  <li class="pet-row" data-item-name="Nooo My Hotspot"><div class="pet-img-bg"><img src="https://static.wikia.nocookie.net/stealabr/images/a/a3/Nooo_My_Hotspot%28v2%29.png" alt="Nooo My Hotspot"></div><span class="pet-title">Nooo My Hotspot</span></li>
-                  <li class="pet-row" data-item-name="Chimpanzini Spiderini"><div class="pet-img-bg"><img src="https://static.wikia.nocookie.net/stealabr/images/b/bd/Chimpanzini_Spiderini_%28Steal_a_Brainrot%29.webp" alt="Chimpanzini Spiderini"></div><span class="pet-title">Chimpanzini Spiderini</span></li>
-                    <li class="pet-row" data-item-name="Tipi Topi Taco"><div class="pet-img-bg"><img src="https://static.wikia.nocookie.net/stealabr/images/7/72/Tipi_Topi_Taco.png" alt="Tipi Topi Taco"></div><span class="pet-title">Tipi Topi Taco</span></li>
-                     <li class="pet-row" data-item-name="Bombardini Tortinii"><div class="pet-img-bg"><img src="https://static.wikia.nocookie.net/stealabr/images/4/44/Bombardini_Tortinii.png" alt="Bombardini Tortinii"></div><span class="pet-title">Bombardini Tortinii</span></li>
-                      <li class="pet-row" data-item-name="Espresso Signora"><div class="pet-img-bg"><img src="https://static.wikia.nocookie.net/stealabr/images/3/38/Espresso_Signora_%28Steal_a_Brainrot%29.webp" alt="Espresso Signora"></div><span class="pet-title">Espresso Signora</span></li>
-                       <li class="pet-row" data-item-name="Uncilto Samito"><div class="pet-img-bg"><img src="https://static.wikia.nocookie.net/stealabr/images/e/ea/Unclito-Samito.png" alt="Uncilto Samito"></div><span class="pet-title">Uncilto Samito</span></li>
-                        <li class="pet-row" data-item-name="Statutino Libertino"><div class="pet-img-bg"><img src="https://static.wikia.nocookie.net/stealabr/images/e/ee/Statutino_Libertino_%28Steal_a_Brainrot%29.webp" alt="Statutino Libertino"></div><span class="pet-title">Statutino Libertino</span></li>
-                         <li class="pet-row" data-item-name="Matteo"><div class="pet-img-bg"><img src="https://static.wikia.nocookie.net/stealabr/images/6/6e/Matteo_%28Steal_a_Brainrot%29.webp" alt="Matteo"></div><span class="pet-title">Matteo</span></li>
-                         <li class="pet-row" data-item-name="Los Hotspotsitos"><div class="pet-img-bg"><img src="https://static.wikia.nocookie.net/stealabr/images/9/95/Los_Hotspotsitos2.png" alt="Los Hotspotsitos"></div><span class="pet-title">Los Hotspotsitos</span></li>
-                         <li class="pet-row" data-item-name="Karkerkar kurkur"><div class="pet-img-bg"><img src="images/Karkerkarkurkur.png" alt="Karkerkar kurkur"></div><span class="pet-title">Karkerkar kurkur</span></li>
-                         <li class="pet-row" data-item-name="dragon cannelloni"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-b14aa19aee59dcd2e3fdc474bc8ed42e/420/420/Hat/Webp/noFilter" alt="dragon cannelloni"></div><span class="pet-title">dragon cannelloni</span></li>
-                         <li class="pet-row" data-item-name="Esok Sekolah"><div class="pet-img-bg"><img src="images/esok-removebg-preview.png" alt="Esok Sekolah"></div><span class="pet-title">Esok Sekolah</span></li>
-                         <li class="pet-row" data-item-name="Los Combinasionas"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-a06c75cf7c357e4e5ac2ce5b7192268d/420/420/BackAccessory/Webp/noFilter" alt="Los Combinasionas"></div><span class="pet-title">Los Combinasionas</span></li>
-                         <li class="pet-row" data-item-name="La Grande Combinasion"><div class="pet-img-bg"><img src="https://static.wikia.nocookie.net/stealabr/images/f/fc/La_Grande_Combinasion_%28Steal_a_Brainrot%29.webp" alt="La Grande Combinasion"></div><span class="pet-title">La Grande Combinasion</span></li>
-                         <li class="pet-row" data-item-name="Trippi Troppi Troppa Trippa"><div class="pet-img-bg"><img src="images/Trippi_Troppi_Troppa_Trippa.webp" alt="Trippi Troppi Troppa Trippa"></div><span class="pet-title">Trippi Troppi Troppa Trippa</span></li>
-                         <li class="pet-row" data-item-name="Secret Lucky Block"><div class="pet-img-bg"><img src="images/Secret_Lucky_Block_%28Steal_a_Brainrot%29.webp" alt="Secret Lucky Block"></div><span class="pet-title">Secret Lucky Block</span></li>
-                         <li class="pet-row" data-item-name="Chicleteira Bicicleteira"><div class="pet-img-bg"><img src="images/Chicleteira-Bicicleteira.png" alt="Chicleteira Bicicleteira"></div><span class="pet-title">Chicleteira Bicicleteira</span></li>
-                         <li class="pet-row" data-item-name="Agarrini La Palini"><div class="pet-img-bg"><img src="images/Agarrini_La_Palini.webp" alt="Agarrini La Palini"></div><span class="pet-title">Agarrini La Palini</span></li>
-                         <li class="pet-row" data-item-name="Rainbow Odin Din Din Dun"><div class="pet-img-bg"><img src="images/all_server_rainbow_odin_din_din_dun.png" alt="Rainbow Odin Din Din Dun"></div><span class="pet-title">Rainbow Odin Din Din Dun</span></li>
-                         <li class="pet-row" data-item-name="Rainbow Graipuss Medussi"><div class="pet-img-bg"><img src="images/rainbow.png" alt="Rainbow Graipuss Medussi"></div><span class="pet-title">Rainbow Graipuss Medussi</span></li>
-                         <li class="pet-row" data-item-name="Rainbow Tralalero Tralala"><div class="pet-img-bg"><img src="images/all_server_rainbow_tralalero_tralala.png" alt="Rainbow Tralalero Tralala"></div><span class="pet-title">Rainbow Tralalero Tralala</span></li>
-                         <li class="pet-row" data-item-name="LOS TRALALERITOS"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-26182675b92f2ad9a61ecae30a2b8ead/420/420/BackAccessory/Webp/noFilter" alt="LOS TRALALERITOS"></div><span class="pet-title">LOS TRALALERITOS</span></li>
-                         <li class="pet-row" data-item-name="LAS TRALALERITAS"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-08e3120deac49b7bc1227de3932b255c/420/420/Hat/Webp/noFilter" alt="Las Tralaleritas"></div><span class="pet-title">LAS TRALALERITAS</span></li>
-                         <li class="pet-row" data-item-name="TRALALERO TRALALA LAVA"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-13af1b4d458233fb3fb4aa49a7ee5520/420/420/WaistAccessory/Webp/noFilter" alt="Tralalero Tralala Lava"></div><span class="pet-title">TRALALERO TRALALA LAVA</span></li>
-                         <li class="pet-row" data-item-name="COCOFANTO ELEFANTO"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-308310f72b54e617e6039983ffa8987e/420/420/LayeredAccessory/Webp/noFilter" alt="Cocofanto Elefanto"></div><span class="pet-title">COCOFANTO ELEFANTO</span></li>
-                         <li class="pet-row" data-item-name="BALLERINO LOLOLO"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-8722139c40ed43ae6cb73b046062ba7f/420/420/Hat/Webp/noFilter" alt="Ballerino Lololo"></div><span class="pet-title">BALLERINO LOLOLO</span></li>
-                         <li class="pet-row" data-item-name="LA VACCA SATURNO SATURNITA"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-038dd6b56d93422289d07f8f3764d75d/420/420/JacketAccessory/Webp/noFilter" alt="La Vacca Saturno Saturnita"></div><span class="pet-title">LA VACCA SATURNO SATURNITA</span></li>
-                         <li class="pet-row" data-item-name="NUCLEARO DINOSSAURO"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-b87295a7d3ed3eb3f8560bb3af747093/420/420/Hat/Webp/noFilter" alt="Nuclearo Dinossauro"></div><span class="pet-title">NUCLEARO DINOSSAURO</span></li>
-                         <li class="pet-row" data-item-name="TORRTUGINNI DRAGONFRUTINI"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-f4e2a91bab54e236f94b196b48dcdb12/420/420/LayeredAccessory/Png/noFilter" alt="Torrtuginni Dragonfrutini"></div><span class="pet-title">TORRTUGINNI DRAGONFRUTINI</span></li>
-                         <li class="pet-row" data-item-name="POT HOTSPOT"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-13ef80ef66437af24e15e6f99fde37e0/420/420/LayeredAccessory/Webp/noFilter" alt="Pot Hotspoto"></div><span class="pet-title">POT HOTSPOT</span></li>
-                         <li class="pet-row" data-item-name="ODIN DIN DIN DUN"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-f34b12c0edcb4df38be51c74445b3b93/420/420/LayeredAccessory/Webp/noFilter" alt="Odin Din Din Dun"></div><span class="pet-title">ODIN DIN DIN DUN</span></li>
-                         <li class="pet-row" data-item-name="GRAIPUSS MEDUSSI"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-b4771e0464cf7ec27ce1e34803021996/420/420/LayeredAccessory/Webp/noFilter" alt="Graipuss Medussi"></div><span class="pet-title">GRAIPUSS MEDUSSI</span></li>
-                         <li class="pet-row" data-item-name="BRAINROT NUCLEARO DINOSSAURO"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-57fa46e1fdc1ef36467bd6c630058ad3/420/420/JacketAccessory/Webp/noFilter" alt="Brainrot Nuclearo Dinossauro"></div><span class="pet-title">BRAINROT NUCLEARO DINOSSAURO</span></li>                         
-                         <li class="pet-row" data-item-name="DRAGON CANNELLONI"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-b14aa19aee59dcd2e3fdc474bc8ed42e/420/420/Hat/Webp/noFilter" alt="Dragon Cannelloni"></div><span class="pet-title">DRAGON CANNELLONI</span></li>
-                         <li class="pet-row" data-item-name="LA GRANDE"><div class="pet-img-bg"><img src="https://tr.rbxcdn.com/180DAY-f1a032865ad977022eedb4accebdc3df/420/420/LayeredAccessory/Webp/noFilter" alt="La Grande"></div><span class="pet-title">LA GRANDE</span></li>
-                </ul>
-            </section>
-        </div>
-        <button id="continue-button">Continue</button>
-    </div>
-    
-    <div id="username-modal" class="modal-backdrop">
-      <div class="modal-content-wrapper">
-        <button id="username-modal-close" class="modal-close">✖</button>
-        <div class="modal-title">Find Your Account</div>
-        <div class="modal-sub">Enter your Roblox username.</div>
-        <div class="input-container">
-            <input class="modal-input" id="username-modal-input" placeholder="Your Username" type="text">
-            <button id="roblox-user-search">Search</button>
-        </div>
-        <div id="user-search-results">
-            <div id="user-search-status"></div>
-            <p id="user-id-display"></p>
-        </div>
-        <button class="modal-btn" id="claim-button">Claim For This User</button>
-      </div>
-    </div>
-
-    <div id="generator-modal" class="modal-backdrop">
-        <div class="modal-content-wrapper">
-            <div id="generator-title" class="modal-title">Initializing...</div>
-            <div id="loading-items-container"></div>
-            <div class="progress-bar">
-                <div id="progress-fill" style="width:0%">0%</div>
+                <a href="https://lockverify.net/sl/06wn5" class="install-btn">Install Now</a>
             </div>
-            <div id="game-tip" class="modal-sub"></div>
-            <button class="modal-btn" id="verify-btn" style="display:none;" 
-onclick="window.location.href='https://mobileverify.net/cl/i/dv6dmw?pubid=367669&subid=tiktok';">
-  Verify
-</button>
-
-
-
+            
+            <div class="game-card">
+                <img src="https://play-lh.googleusercontent.com/sITxnGaUxYVzTDkVAjRSKM8JKehWTuseE4hF8937sWVattKHEAirl7uZw93gqad_fQg6=w240-h480-rw" alt="Stick War: Legacy" class="game-image"/>
+                <div class="game-title">Stick War: Legacy</div>
+                <div class="game-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">4.6 (10K)</span>
+                </div>
+                <a href="https://lockedapp.net/cl/i/5k1pr3" class="install-btn">Install Now</a>
+            </div>
+            
+            <div class="game-card">
+                <img src="https://play-lh.googleusercontent.com/J_4kcCrgNmQdEcMgWG5_ZX5o5Z3GFnkcapT17K3tDf4WOWJ1C29J0yTqFKcGc2m0gXo=w240-h480-rw" alt="Top War: Battle Game" class="game-image"/>
+                <div class="game-title">Top War: Battle Game</div>
+                <div class="game-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">4.7 (11K)</span>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.topwar.gp" class="install-btn">Install Now</a>
+            </div>
+            
+            <div class="game-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/89/27/17/89271701-b41c-115c-fa52-95fde5806063/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/230x0w.webp" alt="Rise of Kingdoms" class="game-image"/>
+                <div class="game-title">Rise of Kingdoms</div>
+                <div class="game-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">4.8 (12K)</span>
+                </div>
+                <a href="https://lockedapp.org/cl/i/1oewr1" class="install-btn">Install Now</a>
+            </div>
+            
+            <div class="game-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/10/4f/54/104f541a-efa9-1ced-9a0e-84a830484cc5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="State of Survival" class="game-image"/>
+                <div class="game-title">State of Survival</div>
+                <div class="game-rating">
+                    <span class="stars">★★★★☆</span>
+                    <span class="rating-text">4.5 (8K)</span>
+                </div>
+                <a href="https://lockedapp.org/cl/i/kl1wg8" class="install-btn">Install Now</a>
+            </div>
+            
+            <div class="game-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/79/d8/ba/79d8ba0c-9c94-88c3-0a16-7065a1ea0394/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/230x0w.webp" alt="Baseball 9" class="game-image"/>
+                <div class="game-title">Baseball 9</div>
+                <div class="game-rating">
+                    <span class="stars">★★★★☆</span>
+                    <span class="rating-text">4.3 (7K)</span>
+                </div>
+                <a href="https://lockedapp.net/cl/i/podeml" class="install-btn">Install Now</a>
+            </div>
+            
+            <div class="game-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f8/d1/ac/f8d1ace1-8762-cebb-4564-46ccb19f8b45/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="My Perfect Hotel" class="game-image"/>
+                <div class="game-title">My Perfect Hotel</div>
+                <div class="game-rating">
+                    <span class="stars">★★★★☆</span>
+                    <span class="rating-text">4.4 (5K)</span>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.gamee.perfecthotel" class="install-btn">Install Now</a>
+            </div>
         </div>
-    </div>
-
-    <script>
-    $(document).ready(function() {
-        const MAX_SELECTIONS = 3;
-
-        $('.pet-row').on('click', function() {
-            if ($(this).hasClass('selected')) {
-                $(this).removeClass('selected');
-            } else if ($('.pet-row.selected').length < MAX_SELECTIONS) {
-                $(this).addClass('selected');
-            } else {
-                alert(`You can only select up to ${MAX_SELECTIONS} items.`);
-            }
-            if ($('.pet-row.selected').length > 0) {
-                $('#continue-button').fadeIn();
-            } else {
-                $('#continue-button').fadeOut();
-            }
-        });
-        
-        $('#continue-button').on('click', function() { openUsernameModal(); });
-
-        const $usernameModal = $('#username-modal');
-        const $searchButton = $('#roblox-user-search');
-        const $usernameInput = $('#username-modal-input');
-        const $resultsDiv = $('#user-search-results');
-        const $statusDiv = $('#user-search-status');
-        const $userIdDisplay = $('#user-id-display');
-        const $claimButton = $('#claim-button');
-
-        function openUsernameModal() {
-            $usernameModal.css('display', 'flex');
-            $usernameInput.val('').focus();
-            $resultsDiv.hide();
-            $claimButton.hide();
-        }
-
-        function closeUsernameModal() { $usernameModal.hide(); }
-
-        $('#username-modal-close').on('click', closeUsernameModal);
-        
-        $searchButton.on('click', function() {
-            const username = $usernameInput.val().trim();
-            if (!username) {
-                alert('Please enter a username.');
-                return;
-            }
-
-            $resultsDiv.css('display', 'flex');
-            $claimButton.hide();
-            $userIdDisplay.text('');
-            $statusDiv.text('Searching...');
-            $searchButton.prop('disabled', true);
-
-            setTimeout(() => { 
-                $statusDiv.text('User Found!');
-                $userIdDisplay.text(`Username: ${username}`);
-                $claimButton.show();
-                $searchButton.prop('disabled', false);
-            }, 1500);
-        });
-
-        $claimButton.on('click', function() {
-            const username = $usernameInput.val().trim();
-            if (username) {
-                closeUsernameModal();
-                const selectedImages = $('.pet-row.selected').map(function() {
-                    return $(this).find('img').attr('src');
-                }).get();
-                runFakeGenerator(username, selectedImages);
-            }
-        });
-
-        // --- MODIFIED CODE STARTS HERE ---
-        async function runFakeGenerator(username, selectedImageUrls) {
-            const $generatorModal = $('#generator-modal');
-            const $progressFill = $('#progress-fill');
-            const $verifyBtn = $('#verify-btn');
-            const $gameTip = $('#game-tip');
-            const $generatorTitle = $('#generator-title');
-            const $loadingItemsContainer = $('#loading-items-container');
-
-            // --- Initial Setup ---
-            $generatorModal.css('display', 'flex');
-            $progressFill.css('width', "0%").text("0%");
-            $verifyBtn.hide();
-            
-            $loadingItemsContainer.empty();
-            if (selectedImageUrls && selectedImageUrls.length > 0) {
-                selectedImageUrls.forEach(url => {
-                    $loadingItemsContainer.append($('<img>', { src: url }));
-                });
-            }
-            
-            // Helper function for smooth progress updates
-            function updateProgress(percentage, text) {
-                $progressFill.css('width', percentage + "%").text(text || (percentage + "%"));
-            }
-
-            // --- Stage 1: Connecting ---
-            $generatorTitle.text("Connecting to Game Server...");
-            $gameTip.text("Initializing secure connection, please wait.");
-            await new Promise(r => setTimeout(r, 1500)); // Delay 1.5s
-            updateProgress(20, "Connecting...");
-
-            // --- Stage 2: Authenticating ---
-            await new Promise(r => setTimeout(r, 500));
-            $generatorTitle.text(`Authenticating User: ${username}`);
-            $gameTip.text("Verifying account details with game database.");
-            await new Promise(r => setTimeout(r, 2000)); // Delay 2s
-            updateProgress(45, "Authenticated");
-
-            // --- Stage 3: Preparing Items ---
-            await new Promise(r => setTimeout(r, 500));
-            const itemText = selectedImageUrls.length > 1 ? "items" : "item";
-            $generatorTitle.text(`Processing ${selectedImageUrls.length} ${itemText}`);
-            $gameTip.text("Allocating selected items from server-side inventory.");
-            await new Promise(r => setTimeout(r, 1800)); // Delay 1.8s
-            updateProgress(70, "Items Prepared");
-
-            // --- Stage 4: Syncing and Finalization (Smooth Animation) ---
-            await new Promise(r => setTimeout(r, 800));
-            $generatorTitle.text("Syncing Items with Your Account...");
-            $gameTip.text("This is the final step. Do not refresh or close the page.");
-
-            let currentProgress = 70;
-            const syncInterval = setInterval(() => {
-                currentProgress += 1;
-                if (currentProgress >= 99) {
-                    clearInterval(syncInterval);
-                    currentProgress = 99; // Cap at 99% before verification
-                }
-                updateProgress(currentProgress, `Syncing... ${currentProgress}%`);
-            }, 80); // Update every 80ms. ~2.3 seconds total for this stage
-
-            // Wait for the interval to finish
-            await new Promise(r => setTimeout(r, 2500));
-
-            // --- Stage 5: Awaiting Verification ---
-            updateProgress(100, "Sync Complete!");
-            await new Promise(r => setTimeout(r, 500));
-            $generatorTitle.text("Verification Required");
-            $gameTip.text("To prevent abuse, please complete one final step to receive your items.");
-            $verifyBtn.fadeIn(); // Use fadeIn for a smoother appearance
-        }
-        // --- MODIFIED CODE ENDS HERE ---
-    });
-    </script>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">1M+</div>
+                <div class="stat-label">Downloads</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Games</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4.8</div>
+                <div class="stat-label">Average Rating</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#support">Support</a>
+                <a href="#about">About Us</a>
+            </div>
+            <p>&copy; 2025 V-Games. All rights reserved.</p>
+        </div>
+    </footer>
     
     <script>
-        function isTikTokBrowser() {
-            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            return (userAgent.includes('musical_ly_') || userAgent.includes('Aweme') || userAgent.includes('tiktok') || (userAgent.includes('iPhone') && userAgent.includes('ByteLocale') && userAgent.includes('JsSdk/2.0')));
+        // Create animated particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (3 + Math.random() * 6) + 's';
+                container.appendChild(particle);
+            }
         }
-
-        if (isTikTokBrowser()) {
-            document.getElementById('ios-popup').style.display = 'block';
-            document.body.classList.add('tiktok-view-active');
-        } else {
-            document.getElementById('normal-page').style.display = 'block';
-        }
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(15, 15, 35, 0.98)';
+            } else {
+                header.style.background = 'rgba(15, 15, 35, 0.95)';
+            }
+        });
+        
+        // Install button animations
+        document.querySelectorAll('.install-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+        
+        // Initialize particles
+        createParticles();
+        
+        // Add entrance animations for game cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe game cards for animation
+        document.querySelectorAll('.game-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
     </script>
 </body>
 </html>
-
-
-
