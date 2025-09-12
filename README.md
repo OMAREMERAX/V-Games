@@ -714,7 +714,7 @@
             }
         }
     </style>
-</head>
+
 <body>
     <!-- (All existing HTML remains unchanged) -->
     
@@ -1112,4 +1112,5 @@
 
 </body>
 </html>
+
 
