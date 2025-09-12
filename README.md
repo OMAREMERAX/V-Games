@@ -714,6 +714,7 @@
             }
         }
     </style>
+    </head>
 
 <body>
     <!-- (All existing HTML remains unchanged) -->
@@ -1013,7 +1014,7 @@
       display: none;
     }
   </style>
-</head>
+
 
   <!-- Header -->
   <header>
