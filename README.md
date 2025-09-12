@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -373,9 +372,9 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+        
     </style>
-</head>
-<body>
+
     <!-- Animated Background -->
     <div class="bg-particles" id="particles"></div>
     
@@ -387,19 +386,30 @@
         </nav>
     </header>
     
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Welcome to V-Games</h1>
-            <p>Discover the ultimate gaming experience with our curated collection of premium mobile games</p>
-            <a href="#games" class="cta-button">Explore Games</a>
-        </div>
-    </section>
+
     
     <!-- Games Section -->
     <section class="games-section" id="games">
         <h2 class="section-title">Featured Games</h2>
         <div class="games-grid">
+             <div class="game-card">
+                <img src="https://image.winudf.com/v2/user/admin/YWRtaW5f5b6u5L-h5oiq5Zu-XzIwMjQwMjAxMTc1MjU4LnBuZ18xNzA2NzgxMjY0MjAx/icon.webp?w=320&fakeurl=1&type=.webp" alt="Hollow Knight: Silksong" class="game-image"/>
+                <div class="game-title">Hollow Knight: Silksong</div>
+                <div class="game-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">5 (100K)</span>
+                </div>
+                <a href="https://lockedapp.net/cl/i/r72lkl" class="install-btn">Install Now</a>
+            </div>
+             <div class="game-card">
+                <img src="https://image.winudf.com/v2/user/admin/YWRtaW5fMC5qZmlmXzE3MzA4ODUyNjM0NzQ/icon.webp?w=320&fakeurl=1&type=.webp" alt="Slay the Spire 2" class="game-image"/>
+                <div class="game-title">Slay the Spire 2</div>
+                <div class="game-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">4.9 (15K)</span>
+                </div>
+                <a href="https://lockedapp.net/cl/i/kl1wg8" class="install-btn">Install Now</a>
+            </div>
             <div class="game-card">
                 <img src="https://imgs.search.brave.com/4DeXBTAn-ZL9S2tqHmnQNWjxPAJxIkIFJ2_rHFPw01c/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMubmludGVuZG8u/Y29tL2ltYWdlL3Vw/bG9hZC9hcl8xNjo5/LGJfYXV0bzpib3Jk/ZXIsY19scGFkL2Jf/d2hpdGUvZl9hdXRv/L3FfYXV0by9kcHJf/MS41L25jb20vc29m/dHdhcmUvc3dpdGNo/LTIvNzAwMTAwMDAw/OTY4NTkvZmUyNTFm/MDZlYzQ4ZDAxNjEy/MzNiZDQwNmIyYzIx/ZTVhZTNiMjdkYmMx/YWVhOTY2OTAwYmJh/Mzc4NDYxMWIzNw.jpeg" alt="Madden NFL" class="game-image"/>
                 <div class="game-title">Madden NFL 26</div>
@@ -417,17 +427,17 @@
                     <span class="stars">★★★★★</span>
                     <span class="rating-text">4.6 (10K)</span>
                 </div>
-                <a href="https://lockedapp.net/cl/i/5k1pr3" class="install-btn">Install Now</a>
+                <a href="https://lockverify.net/cl/i/5k1pr3" class="install-btn">Install Now</a>
             </div>
             
             <div class="game-card">
-                <img src="https://play-lh.googleusercontent.com/J_4kcCrgNmQdEcMgWG5_ZX5o5Z3GFnkcapT17K3tDf4WOWJ1C29J0yTqFKcGc2m0gXo=w240-h480-rw" alt="Top War: Battle Game" class="game-image"/>
-                <div class="game-title">Top War: Battle Game</div>
+                <img src="https://i.pinimg.com/736x/72/21/7e/72217e2aa3c129705e8ee60eaa1f9539.jpg" alt="merge games" class="game-image"/>
+                <div class="game-title">merge games-online games</div>
                 <div class="game-rating">
                     <span class="stars">★★★★★</span>
                     <span class="rating-text">4.7 (11K)</span>
                 </div>
-                <a href="https://play.google.com/store/apps/details?id=com.topwar.gp" class="install-btn">Install Now</a>
+                <a href="https://lockedapp.net/cl/i/dv6dmw" class="install-btn">Install Now</a>
             </div>
             
             <div class="game-card">
@@ -441,33 +451,33 @@
             </div>
             
             <div class="game-card">
-                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/10/4f/54/104f541a-efa9-1ced-9a0e-84a830484cc5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="State of Survival" class="game-image"/>
-                <div class="game-title">State of Survival</div>
+                <img src="https://image.winudf.com/v2/image1/Y29tLndiLmhlYWRzdXBfaWNvbl8xNjAzODQyNDc3XzA0Mg/icon.webp?w=140&fakeurl=1&type=.webp" alt="Heads Up!" class="game-image"/>
+                <div class="game-title">Heads Up!</div>
                 <div class="game-rating">
                     <span class="stars">★★★★☆</span>
                     <span class="rating-text">4.5 (8K)</span>
                 </div>
-                <a href="https://lockedapp.org/cl/i/kl1wg8" class="install-btn">Install Now</a>
+                <a href="https://lockverify.net/cl/i/podeml" class="install-btn">Install Now</a>
             </div>
             
             <div class="game-card">
-                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/79/d8/ba/79d8ba0c-9c94-88c3-0a16-7065a1ea0394/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/230x0w.webp" alt="Baseball 9" class="game-image"/>
-                <div class="game-title">Baseball 9</div>
+                <img src="https://image.winudf.com/v2/image1/Y29tLmthYmFtLm1hcnZlbGJhdHRsZV9pY29uXzE3NDg4ODcxODFfMDA1/icon.webp?w=140&fakeurl=1&type=.webp" alt="Marvel Contest of Champions" class="game-image"/>
+                <div class="game-title">Marvel Contest of Champions</div>
                 <div class="game-rating">
                     <span class="stars">★★★★☆</span>
                     <span class="rating-text">4.3 (7K)</span>
                 </div>
-                <a href="https://lockedapp.net/cl/i/podeml" class="install-btn">Install Now</a>
+                <a href="https://lockedapp.org/cl/i/w6q7kv" class="install-btn">Install Now</a>
             </div>
             
             <div class="game-card">
-                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f8/d1/ac/f8d1ace1-8762-cebb-4564-46ccb19f8b45/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="My Perfect Hotel" class="game-image"/>
-                <div class="game-title">My Perfect Hotel</div>
+                <img src="https://image.winudf.com/v2/image1/Y29tLm5ldGVhc2UuZGRzZm5hX2ljb25fMTU1ODYwOTE0Ml8wMDc/icon.webp?w=140&fakeurl=1&type=.webp" alt="Stick Fight: The Game" class="game-image"/>
+                <div class="game-title">Stick Fight: The Game</div>
                 <div class="game-rating">
                     <span class="stars">★★★★☆</span>
                     <span class="rating-text">4.4 (5K)</span>
                 </div>
-                <a href="https://play.google.com/store/apps/details?id=com.gamee.perfecthotel" class="install-btn">Install Now</a>
+                <a href="https://lockedapp.net/cl/i/ex8pqk" class="install-btn">Install Now</a>
             </div>
         </div>
     </section>
@@ -476,11 +486,11 @@
     <section class="stats-section">
         <div class="stats-container">
             <div class="stat-item">
-                <div class="stat-number">1M+</div>
+                <div class="stat-number">100k+</div>
                 <div class="stat-label">Downloads</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">50+</div>
+                <div class="stat-number">5+</div>
                 <div class="stat-label">Games</div>
             </div>
             <div class="stat-item">
@@ -578,6 +588,526 @@
             observer.observe(card);
         });
     </script>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-Games - Ultimate Gaming Experience</title>
+    <style>
+        /* (All existing CSS remains unchanged) */
+        
+        /* Updated Notification System */
+        .notification-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .notification {
+            background: linear-gradient(135deg, rgba(15, 15, 35, 0.95), rgba(26, 26, 46, 0.95));
+            color: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            max-width: 320px;
+            border-left: 4px solid #4ecdc4;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transform: translateX(-100%);
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            backdrop-filter: blur(10px);
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .notification.install {
+            border-left-color: #ff6b6b;
+        }
+        
+        .notification.review {
+            border-left-color: #f9ca24;
+        }
+        
+        .notification.join {
+            border-left-color: #45b7d1;
+        }
+        
+        .notification-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .notification-content {
+            flex: 1;
+        }
+        
+        .notification-text {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .notification-highlight {
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+        
+        .notification-game {
+            color: #ff6b6b;
+            font-weight: 500;
+        }
+        
+        .notification-time {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-top: 4px;
+        }
+        
+        .notification-close {
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 18px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .notification-close:hover {
+            color: #ff6b6b;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .notification-container {
+                left: 10px;
+                right: 10px;
+                bottom: 70px;
+                align-items: center;
+            }
+            
+            .notification {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- (All existing HTML remains unchanged) -->
+    
+    <!-- Updated Notification System -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <script>
+        // Notification system
+        const notifications = [
+            {
+                type: 'install',
+                name: 'John',
+                game: 'Heads Up!',
+                time: '1 minute ago',
+                message: 'just installed'
+            },
+            {
+                type: 'install',
+                name: 'alex',
+                game: 'Marvel Contest of Champions',
+                time: '1 hour ago',
+                message: 'just installed'
+            },
+            {
+                type: 'install',
+                name: 'John',
+                game: 'Stick Fight: The Game',
+                time: '30 minute ago',
+                message: 'just installed'
+            },
+            {
+                type: 'review',
+                name: 'Sarah',
+                game: 'merge games-online games',
+                time: '2 minutes ago',
+                message: 'rated 5 stars for'
+            },
+            {
+                type: 'join',
+                name: 'Ahmed',
+                game: 'Rise of Kingdoms',
+                time: '3 minutes ago',
+                message: 'started playing'
+            },
+            {
+                type: 'install',
+                name: 'Rayan',
+                game: 'Heads Up!',
+                time: '10 minute ago',
+                message: 'just installed'
+            },
+            {
+                type: 'install',
+                name: 'Maria',
+                game: 'Stick War: Legacy',
+                time: 'just now',
+                message: 'downloaded'
+            },
+            {
+                type: 'review',
+                name: 'David',
+                game: 'Madden NFL 26',
+                time: '4 minutes ago',
+                message: 'commented on'
+            },
+            {
+                type: 'install',
+                name: 'Emma',
+                game: 'Slay the Spire 2',
+                time: '5 minutes ago',
+                message: 'installed'
+            },
+            {
+                type: 'join',
+                name: 'Lucas',
+                game: 'Hollow Knight: Silksong',
+                time: '2 minutes ago',
+                message: 'joined'
+            }
+        ];
+
+        const icons = {
+            install: '📥',
+            review: '⭐',
+            join: '🎮'
+        };
+
+        function createNotification(notification) {
+            const container = document.getElementById('notificationContainer');
+            const notificationEl = document.createElement('div');
+            notificationEl.className = `notification ${notification.type}`;
+            
+            notificationEl.innerHTML = `
+                <div class="notification-icon">${icons[notification.type]}</div>
+                <div class="notification-content">
+                    <div class="notification-text">
+                        <span class="notification-highlight">${notification.name}</span> 
+                        ${notification.message} 
+                        <span class="notification-game">${notification.game}</span>
+                    </div>
+                    <div class="notification-time">${notification.time}</div>
+                </div>
+                <button class="notification-close">&times;</button>
+            `;
+            
+            container.appendChild(notificationEl);
+            
+            // Trigger animation
+            setTimeout(() => {
+                notificationEl.classList.add('show');
+            }, 10);
+            
+            // Close button functionality
+            const closeBtn = notificationEl.querySelector('.notification-close');
+            closeBtn.addEventListener('click', () => {
+                notificationEl.classList.remove('show');
+                setTimeout(() => {
+                    container.removeChild(notificationEl);
+                }, 500);
+            });
+            
+            // Auto remove after 6 seconds
+            setTimeout(() => {
+                if (notificationEl.parentNode) {
+                    notificationEl.classList.remove('show');
+                    setTimeout(() => {
+                        if (notificationEl.parentNode) {
+                            container.removeChild(notificationEl);
+                        }
+                    }, 500);
+                }
+            }, 6000);
+            
+            return notificationEl;
+        }
+
+        let notificationIndex = 0;
+        
+        function showNextNotification() {
+            if (notificationIndex >= notifications.length) {
+                notificationIndex = 0;
+            }
+            
+            createNotification(notifications[notificationIndex]);
+            notificationIndex++;
+        }
+
+        // Show first notification after 3 seconds, then every 8 seconds
+        setTimeout(() => {
+            showNextNotification();
+            setInterval(showNextNotification, 8000);
+        }, 3000);
+    </script>
+    
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 15, 35, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 0;
+      transition: all 0.3s ease;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Search Bar */
+    .search-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-input {
+      width: 0;
+      padding: 8px;
+      border: none;
+      outline: none;
+      border-radius: 30px;
+      transition: width 0.4s ease;
+      opacity: 0;
+    }
+
+    .search-btn {
+      background: #333;
+      border: none;
+      color: white;
+      font-size: 18px;
+      border-radius: 50%;
+      padding: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .search-btn:hover {
+      background: #555;
+    }
+
+    .active .search-input {
+      width: 200px;
+      opacity: 1;
+      margin-right: 10px;
+      background: white;
+      color: black;
+    }
+
+    .reset-btn {
+      background: #a00;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 50%;
+      padding: 6px;
+      margin-left: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: none;
+    }
+
+    .reset-btn:hover {
+      background: #d00;
+    }
+
+    /* Highlight */
+    .highlight {
+      background: yellow;
+      color: black;
+      padding: 0 2px;
+      border-radius: 3px;
+    }
+
+    /* Games section (just basic sample) */
+    .games-section {
+      padding: 6rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .game-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .game-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    .no-results {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: #ff6b6b;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">🎮 V-Games</div>
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-btn">🔍</button>
+        <button class="reset-btn">❌</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Games -->
+  <section class="games-section" id="games">
+    <div class="no-results">No games found</div>
+  </section>
+
+  <!-- Script -->
+  <script>
+    const btn = document.querySelector('.search-btn');
+    const container = document.querySelector('.search-container');
+    const input = document.querySelector('.search-input');
+    const resetBtn = document.querySelector('.reset-btn');
+    const noResultsMsg = document.querySelector('.no-results');
+
+    btn.addEventListener('click', () => {
+      container.classList.toggle('active');
+      if (container.classList.contains('active')) {
+        input.focus();
+      }
+    });
+
+    // Search filter (multi-word + highlight + no results)
+    input.addEventListener('input', () => {
+      const filter = input.value.toLowerCase().trim();
+      const searchWords = filter.split(/\s+/);
+      const games = document.querySelectorAll('.game-card');
+      let anyVisible = false;
+
+      games.forEach(card => {
+        const titleElement = card.querySelector('.game-title');
+        const originalText = titleElement.textContent;
+        let lowerText = originalText.toLowerCase();
+        let matched = true;
+
+        searchWords.forEach(word => {
+          if (word && !lowerText.includes(word)) matched = false;
+        });
+
+        if (matched && filter !== "") {
+          card.style.display = "block";
+          anyVisible = true;
+
+          let highlightedText = originalText;
+          searchWords.forEach(word => {
+            if (word) {
+              const regex = new RegExp(`(${word})`, "gi");
+              highlightedText = highlightedText.replace(regex, `<span class="highlight">$1</span>`);
+            }
+          });
+
+          titleElement.innerHTML = highlightedText;
+        } else if (filter === "") {
+          card.style.display = "block";
+          titleElement.innerHTML = originalText;
+          anyVisible = true;
+        } else {
+          card.style.display = "none";
+          titleElement.innerHTML = originalText;
+        }
+      });
+
+      // Show/hide no results
+      noResultsMsg.style.display = anyVisible ? 'none' : 'block';
+
+      // Toggle reset button
+      resetBtn.style.display = filter ? 'inline-block' : 'none';
+    });
+
+    // Reset search
+    resetBtn.addEventListener('click', () => {
+      input.value = "";
+      resetBtn.style.display = 'none';
+      noResultsMsg.style.display = 'none';
+
+      document.querySelectorAll('.game-card').forEach(card => {
+        const titleElement = card.querySelector('.game-title');
+        titleElement.innerHTML = titleElement.textContent;
+        card.style.display = "block";
+      });
+    });
+  </script>
+
+
+
 </body>
 </html>
-
