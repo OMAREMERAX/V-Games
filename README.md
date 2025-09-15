@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 
 <html lang="en">
 <head>
@@ -634,7 +634,7 @@
             observer.observe(card);
         });
     </script>
-<!DOCTYPE html>
+
 
 <html lang="en">
 <head>
