@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 
 <html lang="en">
 <head>
@@ -529,7 +529,7 @@
 <a class="install-btn" href="https://lockedapp.net/cl/i/ex8pqk">Install Now</a>
 </div>
 <div class="game-card"><img alt="stardew valley" class="game-image" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e558db9c-ca9a-4fb7-af65-60c6c53244b8/dhbtqw7-fd4b133e-e104-448f-916b-1d56c4985e6b.png/v1/fill/w_894,h_894/stardew_valley_dock_icon_by_lexiloo826_dhbtqw7-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6Ii9mL2U1NThkYjljLWNhOWEtNGZiNy1hZjY1LTYwYzZjNTMyNDRiOC9kaGJ0cXc3LWZkNGIxMzNlLWUxMDQtNDQ4Zi05MTZiLTFkNTZjNDk4NWU2Yi5wbmciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Q9tU4C96Rqjr8l1IqGa0UK8EDvvz0sKh4y5pXRYv-sY"/><div class="game-title">stardew valley</div><div class="game-rating"><span class="stars">★★★★★</span><span class="rating-text">4.8 (50K)</span></div><a class="install-btn" href="https://lockedapp.org/cl/i/kr7jgl">Install Now</a></div><div class="game-card"><img alt="Fallout 4" class="game-image" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg?t=1750779250"/><div class="game-title">Fallout 4</div><div class="game-rating"><span class="stars">★★★★☆-Free Now</span><span class="rating-text">4.6 (80K)</span></div><a class="install-btn" href="https://lockedapp.org/cl/i/o4xldd">Install Now</a></div>
-</section>
+
 <!-- Stats Section -->
 <section class="stats-section">
 <div class="stats-container">
@@ -634,7 +634,7 @@
             observer.observe(card);
         });
     </script>
-<!DOCTYPE html>
+
 
 <html lang="en">
 <head>
@@ -1310,7 +1310,7 @@
   }, {capture: true});
 })();
 </script>
-</body></html></head>
+</body>
 <!-- Header -->
 <header>
 <nav>
