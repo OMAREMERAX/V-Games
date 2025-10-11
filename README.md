@@ -448,8 +448,8 @@
 <h2 class="section-title">Featured Games</h2>
 <div class="games-grid">
 <div class="game-card">
-<img alt="Hollow Knight: Silksong" class="game-image" src="https://image.winudf.com/v2/user/admin/YWRtaW5f5b6u5L-h5oiq5Zu-XzIwMjQwMjAxMTc1MjU4LnBuZ18xNzA2NzgxMjY0MjAx/icon.webp?w=320&amp;fakeurl=1&amp;type=.webp"/>
-<div class="game-title">Hollow Knight: Silksong</div>
+<img alt="Township Unlimited" class="game-image" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f4/04/71/f4047191-5da1-d18b-d330-8a055e97e411/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/200x200bb.webp"/>
+<div class="game-title">Township Unlimited</div>
 <div class="game-rating">
 <span class="stars">★★★★★</span>
 <span class="rating-text">5 (100K)</span>
@@ -834,7 +834,7 @@
             {
                 type: 'join',
                 name: 'Lucas',
-                game: 'Hollow Knight: Silksong',
+                game: 'Township Unlimited',
                 time: '2 minutes ago',
                 message: 'joined'
             }
